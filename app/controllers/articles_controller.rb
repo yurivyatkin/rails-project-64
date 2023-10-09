@@ -13,6 +13,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def create
     @article = Article.new(article_params)
 
@@ -21,10 +25,6 @@ class ArticlesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def edit
-    @article = Article.find(params[:id])
   end
 
   def update
