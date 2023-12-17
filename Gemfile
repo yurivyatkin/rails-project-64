@@ -89,3 +89,5 @@ group :production do
 end
 
 gem 'dockerfile-rails', '>= 1.5', group: :development
+
+gem "slim_lint", "~> 0.24.0"
